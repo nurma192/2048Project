@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>2048</title>
+     <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+     
+     <header class="header">
+          <div class="header_content">
+               <div class="score_block">
+                    <div class="score_box real_score_box">
+                         <h1>SCORE</h1>
+                         <p id="score">0</p>
+                    </div>
+                         
+                    <div class="score_box max_score_box">
+                         <h1>BEST</h1>
+                         <p id="max_score">0</p>
+
+                    </div>
+               </div>
+               <div class="buttons">
+                    <button id = "new-game-button" class="new_game_button btn">New Game</button>
+                    <button id = "auto-game-button" class="auto_game_button btn">New Auto Game</button>
+               </div>
+          </div>
+     </header>
+
+     <div class="game_content">
+          <div id="game_board">
+<!--              <div class="tile">2</div>-->
+               
+          </div>
+          <div id="choose_level">
+               <button id="levelBtn1" class="levelBtn levelBtn1">4x4</button>
+               <button id="levelBtn2" class="levelBtn levelBtn2">5x5</button>
+               <button id="levelBtn3" class="levelBtn levelBtn3">6x6</button>
+          </div>
+     </div>
+
+     <script src="./js/script.js" type="module"></script>
+<!--     <script src="./js/buttons.js"></script>-->
+
+</body>
+</html>

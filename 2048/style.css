@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+/* font-family: 'Varela Round', sans-serif; */
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+body{
+     background: #333;
+     height: 100vh;
+}
+header{
+     width: 100%;
+     height: 10%;
+     display: flex;
+     justify-content: center;
+     /* background: red; */
+}
+header .header_content{
+     width: 55%;
+     height: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+header .score_block{
+     display: flex;
+     gap: 1vmin;
+}
+header .score_block h1{
+     color: #dccbbd;
+     font-size: 1.5vmin;
+     font-family: 'Varela Round', sans-serif;
+}
+header .score_block p{
+     font-weight: bold;
+     color: white;
+     font-size: 3.5vmin;
+     font-family: 'Varela Round', sans-serif;
+}
+header .score_box{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background-color: #bcac9e;
+     width: 100px;
+     padding: 5px 0;
+}
+header .btn{
+     width: auto;
+     padding: 10px;
+     background: #bcac9e;
+     color:white;
+     border: none;
+     font-family: 'Varela Round', sans-serif;
+     font-size: 2vmin;
+}
+.game_content{
+     background: #444;
+     width: 100%;
+     height: 90%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.game_content #choose_level{
+
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+}
+.game_content .levelBtn{
+     border: none;
+     padding: 30px;
+     font-size: 8vmin;
+     font-family: 'Varela Round', sans-serif;
+     transition: .15s;
+}
+.game_content .levelBtn1{
+     background-color: hsl(25, 60%, 90%);
+     color: black;
+}
+.game_content .levelBtn1:hover{
+     background-color: hsl(25, 60%, 70%);
+}
+.game_content .levelBtn2{
+     background-color: hsl(25, 60%, 70%);
+     color: #fff;
+}
+.game_content .levelBtn2:hover {
+     background-color: hsl(25, 60%, 55%);
+}
+.game_content .levelBtn3{
+     background-color: hsl(25, 60%, 35%);
+     color: #fff;
+}
+.game_content .levelBtn3:hover {
+     background-color: hsl(25, 60%, 25%);
+}
+.game_content #game_board{
+     --size-board:4;
+     --cell-size:17vmin;
+     --cell-gap:1.5vmin;
+     position: relative;
+     display: grid;
+     grid-template-columns: repeat(var(--size-board),var(--cell-size));
+     grid-template-rows: repeat(var(--size-board),var(--cell-size));
+     gap: var(--cell-gap);
+     border-radius: 1vmin;
+     /*display: none;*/
+}
+.game_content .cell{
+     background: #555;
+     border-radius: 1vmin;
+}
+
+
+
+.game_content .tile{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: var(--cell-size);
+     height: var(--cell-size);
+     --x:0;
+     --y:0;
+     position: absolute;
+     top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)));
+     left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)));
+     border-radius: 1vmin;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 6vmin;
+     font-weight: bold;
+     --bg-lightness:#fff;
+     --text-lightness:#fff;
+     background-color: hsl(25, 60%, var(--bg-lightness));
+     color: hsl(20,25%,var(--text-lightness));
+     transition: .3s;
+     animation: show .15s;
+}
+
+
+@keyframes show {
+     0%{
+          opacity: 0;
+          transform: scale(0);
+     }
+     100%{
+          opacity: 1;
+          transform: scale(1);
+     }
+}
+
+@media (max-width:850px) {
+     header .header_content{
+          width: 90%;
+          flex-wrap: wrap;
+     }
+}
